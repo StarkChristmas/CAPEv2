@@ -1,0 +1,51 @@
+# ZStack Machinery Configuration for CAPEv2
+# Copy this file to zstack.conf in the same directory
+
+[zstack]
+# ZStack API endpoint URL (required)
+# Example: http://192.168.1.100:8080
+zstack_api = 
+
+# ZStack account credentials (required)
+zstack_name = 
+zstack_pwd = 
+
+# Two-factor authentication code (optional)
+# Get this from your TOTP app or SMS
+# Leave empty or comment out if 2FA is not enabled
+two_fa_code = 
+
+# SSL verification (optional, default: no)
+# Set to 'yes' if your ZStack uses valid SSL certificates
+verify_ssl = no
+
+# API request timeout in seconds (optional, default: 30)
+timeout = 30
+
+# VM state change timeout in seconds (optional, default: 300)
+# This is read from CAPE's main config timeouts.vm_state
+# vm_state_timeout = 300
+
+# Machine list (comma-separated or space-separated)
+machines = 
+
+# Example machine configuration
+# [cuckoo1]
+# label = cuckoo-sandbox-01
+# ip = 192.168.100.10
+# platform = windows
+# arch = x64
+# snapshot = clean-state
+# tags = win10,office
+# interface = zstack-br0
+# resultserver_ip = 192.168.100.1
+# resultserver_port = 2042
+
+# [cuckoo2]
+# label = cuckoo-sandbox-02
+# ip = 192.168.100.11
+# platform = windows
+# arch = x64
+# snapshot = clean-state
+# tags = win11,office
+# interface = zstack-br0
